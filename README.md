@@ -1,7 +1,7 @@
 downers universe finatra
 ------------------------
 
-```
+```bash
 curl -v --request GET http://localhost:8888/movies
 Note: Unnecessary use of -X or --request, GET is already inferred.
 *   Trying ::1...
@@ -32,3 +32,9 @@ Note: Unnecessary use of -X or --request, GET is already inferred.
 ```
 
 "Connection #0 to host (nil) left intact" means that although the transfer is over, the TCP session itself is still open (i.e no FIN/ACK exchanges have been made), allowing you to keep reusing the same TCP connection for multiple transfers (which could be useful if you don't want to sacrifice time on opening a new TCP connection).
+
+
+Documentation
+-------------
+
+http://localhost:8888/api-docs/ui

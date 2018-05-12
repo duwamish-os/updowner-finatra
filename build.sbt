@@ -9,7 +9,7 @@ version := "0.1"
 scalaVersion := "2.11.7"
 
 lazy val versions = new {
-  val finatra = "2.1.6"
+  val finatra = "2.1.4"
   val guice = "4.0"
   val logback = "1.0.13"
   val finagleMetrics = "0.0.2"
