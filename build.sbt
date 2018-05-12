@@ -13,6 +13,7 @@ lazy val versions = new {
   val guice = "4.0"
   val logback = "1.0.13"
   val finagleMetrics = "0.0.2"
+  val swagger = "0.5.0"
 }
 
 resolvers ++= Seq(
@@ -27,6 +28,7 @@ libraryDependencies ++= Seq(
   "com.twitter.inject" %% "inject-core" % versions.finatra,
   "ch.qos.logback" % "logback-classic" % versions.logback,
   "com.github.rlazoti" %% "finagle-metrics" % versions.finagleMetrics,
+  "com.github.xiaodongw" %% "swagger-finatra2" % versions.swagger,
 
   "com.twitter.finatra" %% "finatra-http" % versions.finatra % "test",
   "com.twitter.finatra" %% "finatra-jackson" % versions.finatra % "test",

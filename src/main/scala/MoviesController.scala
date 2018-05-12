@@ -1,20 +1,19 @@
+import com.github.xiaodongw.swagger.finatra.SwaggerSupport
 import com.twitter.finagle.http.Request
 import com.twitter.finatra.http._
+import com.twitter.util.Future
+import doc.UpDownerDocument
 
-class MoviesController extends Controller {
+final case class Movie(name: String, imdbURL: String)
+
+class MoviesController extends Controller /*with SwaggerSupport*/ {
+
+  //implicit val swagger = MovieDocument
 
   get("/movies") { request: Request =>
-    """
-    {
-     "movies":
-     [
-      {
-        "name": "The Machinist",
-        "imdbURL": "https://www.imdb.com/title/tt0361862"
-      }
-     ]
-    }
-    """.stripMargin
+
+    val movie = Movie("The Machinist", "https://www.imdb.com/title/tt0361862")
+    Future.value(movie)
   }
 
 }
