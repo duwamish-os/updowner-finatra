@@ -38,3 +38,5 @@ Documentation
 -------------
 
 http://localhost:8888/api-docs/ui
+
+![](swagitup.png)
